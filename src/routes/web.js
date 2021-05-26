@@ -1,4 +1,6 @@
+require('dotenv').config();
 const express = require("express");
+const chatBotController = require("../controllers/chatBotController");
 const homePageController = require('../controllers/homePageController');
 let router = express.Router();
 
@@ -7,6 +9,8 @@ let initWebRoutes = (app) => {
     //     return res.json("Hello word");//json - sendFile - send 
     // });
     router.get("/", homePageController.getHomePage);
+    router.get("/webhook", chatBotController.getWebhook);
+    router.post("/webhook", chatBotController.postWebhook);
     return app.use("/", router);
 };
 

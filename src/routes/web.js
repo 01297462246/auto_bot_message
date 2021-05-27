@@ -12,6 +12,7 @@ let initWebRoutes = (app) => {
     //     return res.json("Hello word");//json - sendFile - send 
     // });
     router.get("/", homePageController.getHomePage);
+    router.post("/", homePageController.postHomePage);
     router.get("/webhook", chatBotController.getWebhook);
     router.post("/webhook", chatBotController.postWebhook);
     return app.use("/", router);

@@ -116,6 +116,7 @@ function callSendAPI(sender_psid, response) {
 }
 
 let postWebhook = (req, res) => {
+    console.log("posted");
     let body = req.body;
 
     // Checks this is an event from a page subscription

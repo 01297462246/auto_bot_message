@@ -58,7 +58,9 @@ const PAGE_ACCESS_TOKEN = process.env.PAGE_ACCESS_TOKEN;
 function handleMessage(sender_psid, received_message) {
 
     let response;
-
+    console.log("================================");
+    console.log("Received: " + response);
+    console.log("================================");
     // Check if the message contains text
     if (received_message.text) {
 
